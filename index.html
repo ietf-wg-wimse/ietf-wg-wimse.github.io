@@ -96,6 +96,9 @@
             width: calc(25% - 20px);
             margin-bottom: 20px;
         }
+        .double {
+            width: calc(50% - 20px);
+        }
         .document {
             background: #fff;
             border: 1px solid #ddd;
@@ -142,6 +145,9 @@
         }
         .text-link:hover {
             text-decoration: underline;
+        }
+        .double ul li {
+          text-align: left;
         }
         footer a {
             color: #ffffff;
@@ -243,18 +249,16 @@
                     <h3>Meetings</h3>
                 </div>
             </a>
-            <a href="https://www.youtube.com/watch?v=Ue7L-PAsyDQ" class="document-link">
+            <div class="document-link double">
                 <div class="document">
                     <div class="emoji">📽️</div>
-                    <h3>IETF 119 Session Recording</h3>
+                    <h3>IETF Meeting Recordings</h3>
+                    <ul>
+                        <li><a href="https://www.youtube.com/watch?v=Ue7L-PAsyDQ">IETF 119</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=-BVTXj94wbw">IETF 120</a></li>
+                    </ul>
                 </div>
-            </a>
-            <a href="https://www.youtube.com/watch?v=-BVTXj94wbw" class="document-link">
-                <div class="document">
-                    <div class="emoji">📽️</div>
-                    <h3>IETF 120 Session Recording</h3>
-                </div>
-            </a>
+            </div>
             <a href="https://github.com/ietf-wg-wimse" class="document-link">
                 <div class="document">
                     <div class="emoji">🛠️</div>
