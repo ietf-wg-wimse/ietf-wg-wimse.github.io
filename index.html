@@ -34,6 +34,15 @@
             emailElement.textContent = coded.split('').reverse().join('');
         }
 
+        function showAllMeetings() {
+          var listItems = document.querySelectorAll(".meeting-list li");
+          listItems.forEach((item) => {
+            item.style.display = "list-item";
+          });
+          var more = document.getElementById("show-all-meetings");
+          more.style.display = "none";
+        }
+
         document.addEventListener('DOMContentLoaded', decodeEmail);
     </script> 
     <style>
@@ -152,6 +161,12 @@
         footer a {
             color: #ffffff;
         }
+        .meeting-list > :nth-child(n+6) {
+          display: none;
+        }
+        .meeting-list > :last-child {
+          display: list-item;
+        }
 
         /* Media Queries for Responsive Design */
         @media screen and (max-width: 1024px) {
@@ -249,11 +264,13 @@
                     <h3>Meetings</h3>
                 </div>
             </a>
-            <div class="document-link double">
+            <div class="document-link double" name="meeting-list">
                 <div class="document">
                     <div class="emoji">📽️</div>
                     <h3>IETF Meeting Recordings</h3>
-                    <ul>
+                    <ul class="meeting-list">
+                        <li><a href="https://meetecho-player.ietf.org/playout/?session=IETF-WIMSE-20260603-1500"><i>Interim</i> 2026-06-03</a></li> 
+                        <li><a href="https://meetecho-player.ietf.org/playout/?session=IETF125-WIMSE-20260317-0330">IETF 125</a></li>
                         <li><a href="https://meetecho-player.ietf.org/playout/?session=IETF124-WIMSE-20251106-1930">IETF 124</a></li>
                         <li><a href="https://meetecho-player.ietf.org/playout/?session=IETF-WIMSE-20251014-1600"><i>Interim</i> 2025-10-14</a></li> 
                         <li><a href="https://meetecho-player.ietf.org/playout/?session=IETF-WIMSE-20251007-1600"><i>Interim</i> 2025-10-07</a></li> 
@@ -267,6 +284,7 @@
                         <li><a href="https://meetecho-player.ietf.org/playout/?session=IETF-WIMSE-20240522-1430"><i>Interim</i> 2024-05</a></li>
                         <li><a href="https://meetecho-player.ietf.org/playout/?session=IETF119-WIMSE-20240318-0300">IETF 119</a></li>
                         <li><a href="https://meetecho-player.ietf.org/playout/?session=IETF118-WIMSE-20231107-1200"><i>BoF</i> IETF 118</a></li>
+                        <li id="show-all-meetings"><a href="#meeting-list" onclick="showAllMeetings()"><i>➕ Show all meetings...</i></a></li>
                     </ul>
                 </div>
             </div>
