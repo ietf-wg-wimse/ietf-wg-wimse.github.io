@@ -166,6 +166,15 @@
         }
         .meeting-list > :last-child {
           display: list-item;
+          list-style-type: none;
+        }
+        .meeting-list > :last-child a {
+            color: #a8494d;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .meeting-list > :last-child a:hover {
+            color: #af6367;
         }
 
         /* Media Queries for Responsive Design */
@@ -269,6 +278,8 @@
                     <div class="emoji">📽️</div>
                     <h3>IETF Meeting Recordings</h3>
                     <ul class="meeting-list">
+                        <li><a href="https://meetecho-player.ietf.org/playout/?session=IETF127-WIMSE-20261118-2200">IETF 127</a></li>
+                        <li><a href="https://meetecho-player.ietf.org/playout/?session=IETF127-WIMSE-20261119-2200">IETF 127 <i>joint session with OAuth</i></a></li>
                         <li><a href="https://meetecho-player.ietf.org/playout/?session=IETF-WIMSE-20261007-1600"><i>Interim</i> 2026-08-07</a></li> 
 
                         <li><a href="https://meetecho-player.ietf.org/playout/?session=IETF126-WIMSE-20260720-1200">IETF 126</a></li>
